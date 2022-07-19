@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>html Forms</title>
+	</head>
+	<body>
+		<form action='save.php' method='get'>
+			<label>First Name</label><br>
+			<input type="text" name='first_name' value='softanic' maxlength=10>
+			<br>
+			<label>Last Name</label><br>
+			<input type="text" name="last_name">
+			<br>
+			
+			<label>Mobile No</label><br>
+			<input type="number" name="mobile_no">
+			<br>
+			<label>Email Id</label><br>
+			<input type="email" name="email">
+			<br>
+			
+			<label>Password</label><br>
+			<input type="password" value="demo" name="password">
+			<br>
+			
+			<label>Age</label><br>
+			<input type="number" name="age" min=18 max=22>
+			<br>
+			
+			<label>color</label><br>
+			<input type="color" name="color">
+			<br>
+			
+			<label>date</label><br>
+			<input type="date" name="date">
+			<br>
+			
+			<label>time</label><br>
+			<input type="time" name="time">
+			<br>
+			
+			<label>week</label><br>
+			<input type="week" name="week">
+			<br>
+			
+			<label>month</label><br>
+			<input type="month" name="month">
+			<br>
+			
+			<label>url</label><br>
+			<input type="url" name="url">
+			<br>
+			
+			<label>Gender</label><br>
+			<input type="radio" name="gender" value='m' >Male
+			<input type="radio" name="gender" value="f" checked>female
+			<br>
+			
+			<label>lang known</label><br>
+			<input type="checkbox" name="eng" value='english'>English
+			<input type="checkbox" name="marathi" value="marathi">Marathi
+			<input type="checkbox" name="eng" value='english'>English
+			<input type="checkbox" name="marathi" value="marathi" checked>Marathi
+					
+			
+			<br>
+			<label>city</label><br>
+			<select name="city" multiple>
+				<option value="1">Jalgaon</option>
+				<option  value="2">Bhusawal</option>
+				<option  value="3" selected>Pune</option>
+				<option  value="4">Mumbai</option>
+				<option value="5">Nagpur</option>
+			</select>
+			<br>
+			<label>Address</label><br>
+			<textarea rows=5 cols=50 >Jalgaon</textarea>
+			<br>
+			<label>Photo</label><br>
+			<input type="file" name="photo" accept="image/*">
+			
+			<br>
+			<br>
+			<input type="submit" value="Sign up">
+			<input type="reset" >
+			<input type="button" value="btn" >
+			
+			<button type="submit">abc</button>
+			
+		</form>
+	</body>
+</html>
