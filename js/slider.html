@@ -1,0 +1,19 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<script>
+			function show(img)
+			{
+				document.getElementById('slider').src=img;
+				
+			}
+		</script>
+		<img src='1.jpg' id='slider' height=500 width=1200><br>
+		<input type="radio" name='slider' id='btn_1' value="1.jpg" onclick='show(this.value)' checked>
+		<input type="radio" name='slider' id='btn_2' value="2.jpg" onclick='show(this.value)'>
+		<input type="radio" name='slider' id='btn_3' value="3.jpg" onclick='show(this.value)'>
+		
+	</body>	
+</html>

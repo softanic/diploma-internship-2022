@@ -4,16 +4,43 @@
 	</head>
 	<body>
 		<script>
-			function table(no)
+			function table()
 			{
-				document.write('<table border=1>');
+				let no=document.getElementById('number').value;
+				
+				/*document.write('<table border=1>');
 				for(i=1;i<=10;i++)
 				{
-					document.write('<tr><td>'+2*i+'</td></tr>');
+					document.write('<tr><td>'+no*i+'</td></tr>');
 				}
 				document.write('</table>');
+			*/
+			let table='<table border=1>';
+			//alert(table);
+				for(i=1;i<=10;i++)
+				{
+					table += '<tr><td>'+no*i+'</td></tr>';
+					//alert(table);
+				}
+				table +='</table>';
+				//alert(table);
+				
+				
+				
+			document.getElementById('output').innerHTML=table;
+			}
+			//table(10);
+			
+			function demo()
+			{
+				document.getElementById('number').value=10;
+				document.getElementById('btn').value='Generate Table';
 			}
 		</script>
-			
+		<input type="number" id='number' autofocus value=>
+		<input type="button" id='btn' value="click here" onclick='table()'>
+		<input type="button" value="set" onclick='demo()'>
+		<div id='output'>
+		</div>
 	</body>	
 </html>
