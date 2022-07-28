@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script>
+			function demo()
+			{
+				let c=document.getElementById('color').value;
+				//document.getElementById('demo').style.color=c;
+				document.body.style.background=c;
+			}
+			function hide()
+			{
+				document.getElementById('demo').style.display='none';
+			}
+			setTimeout('hide()',5000);
+		</script>
+	</head>
+	<body>
+		<h1 id="demo">welcome</h1>
+		<input type="color" id='color'>
+		<input type="button" value="change color" onclick="demo()">
+		<input type="button" value="hide" onclick="hide()">
+		
+	</body>
+	
+</html>

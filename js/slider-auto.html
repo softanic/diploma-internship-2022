@@ -1,0 +1,40 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+	<img src='1.jpg' id='slider' height=500 width=1200><br>
+		<script>
+			let count=1;
+			function show()
+			{
+				count++;
+				if(count >3)
+				{
+					count=1;
+				}
+				
+				document.getElementById('slider').src='1.jpg';
+				if(count==1)
+				{
+					document.getElementById('slider').src='1.jpg';
+				}else if(count==2)
+				{
+					document.getElementById('slider').src= '2.jpg';
+					
+				}else{
+					document.getElementById('slider').src='3.jpg';
+				}
+				
+				
+				//alert(count);
+				setTimeout('show()',2000);
+			}
+			//setTimeout('show()',2000);
+			show();
+		</script>
+		
+		
+		
+	</body>	
+</html>

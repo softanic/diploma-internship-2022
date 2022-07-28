@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script>
+			function calc(opr)
+			{
+				let n1= parseInt(document.getElementById('n1').value);
+				let n2=parseInt(document.getElementById('n2').value);
+				if(opr=='add')
+				{
+					ans=n1+n2;
+				}else if(opr=='sub')
+				{
+					ans=n1-n2;
+				}else if(opr=='multi')
+				{
+					ans=n1*n2;
+				}else if(opr=='div')
+				{
+					ans=n1/n2;
+				}else
+				{
+					ans='invalid';
+				}
+				document.getElementById('answer').innerHTML=ans;
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="answer"></h1>
+		<input type="number" id='n1'>
+		<input type="number" id='n2'> <br><br>
+		<input type="button" value="+" onclick="calc('add');">
+		<input type="button" value="-"  onclick="calc('sub');">
+		<input type="button" value="*"  onclick="calc('multi');">
+		<input type="button" value="/" onclick="calc('div');">
+		
+	</body>
+	
+</html>

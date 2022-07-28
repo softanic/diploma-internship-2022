@@ -1,0 +1,9 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<form action='save.php' method="get">
+			<input type="text">
+		</form>
+	</body>
+</html>
