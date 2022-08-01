@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<style>
+			table{
+				background-color:plum;
+				padding:10px;
+			}
+			.btn{
+				height:30px;
+				width:40px;
+			}
+			#ac{
+				width:100%;
+			}
+		</style>
+		<script>
+			//let number_first=0;
+			//let opr1;
+			function numberPress(no)
+			{
+				let old_value=document.getElementById('data').value;
+				document.getElementById('data').value =old_value + no
+			}
+			function operation(opr)
+			{
+				number_first=document.getElementById('data').value;
+				if(document.getElementById('history_opr').innerHTML!='')
+				{
+					ans=calc();
+					document.getElementById('history_number').innerHTML=ans;
+					document.getElementById('history_number_2').innerHTML='';
+					document.getElementById('data').value='';
+					document.getElementById('history_opr').innerHTML=opr ;
+				}
+				else{
+				
+					document.getElementById('history_number').innerHTML=number_first;
+					document.getElementById('history_opr').innerHTML=opr ;
+					document.getElementById('data').value='';
+				}
+			}
+			function calc()
+			{
+				let number_second=parseFloat(document.getElementById('data').value);
+				number_first=parseFloat(document.getElementById('history_number').innerHTML);
+				opr1=document.getElementById('history_opr').innerHTML;
+				document.getElementById('history_number_2').innerHTML=number_second;
+				if(opr1=='+')
+				{
+					//alert(opr1);
+					answer=number_first+number_second;
+					//alert(answer);
+				
+				}
+				
+				return answer;
+			
+			}
+			function output()
+			{
+				document.getElementById('data').value=calc();
+			}
+		</script>
+	</head>
+	<body>
+		<table border=0>
+			<tr>
+				<th colspan=4>Calc</th>
+			</tr>
+			<tr>
+				<td colspan=4>
+					<label id='history_number'>0</label>
+					<label id='history_opr'></label>
+					<label id='history_number_2'></label>
+					<br>
+					<input type="text" id='data' autofocus>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<input class='btn number' type="button" value='7' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='8' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='9' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn symbol' type="button" value='+' onclick="operation(this.value);">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<input class='btn number' type="button" value='4' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='5' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='6' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn symbol' type="button" value='-' onclick="operation(this.value);">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<input class='btn number' type="button" value='1' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='2' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='3' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn symbol' type="button" value='*' onclick="operation(this.value);">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<input class='btn number' type="button" value='.' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='0' onclick="numberPress(this.value);">
+				</th>
+				<th>
+					<input class='btn number' type="button" value='=' onclick="output()">
+				</th>
+				<th>
+					<input class='btn symbol' type="button" value='/' onclick="operation(this.value);">
+				</th>
+			</tr>
+			<tr>
+				<th colspan=4>
+					<input id='ac' type="button" value="AC" class='btn symbol'>
+				</th>
+			</tr>
+		</table>
+	</body>
+</html>

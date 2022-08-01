@@ -1,6 +1,19 @@
 <HTML>
 	<BODY>
+		<script>
+			function demo()
+			{
+				alert('function called');
+				window.location.href='http://google.com';
+			}
+			
+		</script>
+		<a onclick='return confirm("Are u sure?");' href="http://google.com">open Google</a>
+		<input type="button" value='click here' onclick='demo()'>
+		<input type="button" value='refresh' onclick='window.location.reload();'>
+		<input type="button" value='back' onclick='window.history.back();'>
+		<input type="button" value='next' onclick='window.history.forward();'>
+		<input type="button" value='print' onclick='window.print();'>
 		
-		<a onclick='return confirm("Are u sure?");' href="http://google.com">Google</a>
 	</BODY>
 </HTML>

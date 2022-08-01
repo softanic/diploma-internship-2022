@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script>
+			function validate()
+			{
+				let fname=document.getElementById('fname');
+				if(fname.value=="")
+				{
+					//alert('Please enter fname');
+					document.getElementById('errFname').innerHTML='Please enter Fname';
+					fname.style.border='1px solid red'
+					return false;
+				}
+			}
+			function validate2()
+			{
+				let fname=document.getElementById('fname');
+				if(!fname.checkValidity())
+				{
+					document.getElementById('errFname').innerHTML=fname.validationMessage;
+					return false;
+				}else{
+					document.getElementById('errFname').innerHTML='Data OK';
+					return false;
+				}
+				
+			}
+			
+		</script>
+		<style>
+			.red{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<form action='save.php' method='get' novalidate onsubmit='return validate2()'>
+			<label>First Name</label>
+			<input type="text" id='fname' maxlength=10 required>
+			<span id='errFname' class='red'></span>
+			<br>
+			<input type="submit" >
+		</form>
+	</body>
+</html>
