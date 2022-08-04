@@ -1,0 +1,22 @@
+<html>
+	<script>
+		function demo()
+		{
+			//document.getElementById('demo').style.color='red';
+			//document.getElementsByTagName('h1')[1].style.color='red';
+			let h1=document.getElementsByTagName('h1');
+			for(i=0;i<h1.length;i++)
+			{
+				
+				h1[i].style.color='red';
+			}
+		}
+	</script>
+	<body>
+		<h1 >Welcome</h1>
+		<h1 >Welcome</h1>
+		<h1  onclick="demo()">Welcome</h1>
+		
+	</body>
+	
+</html>
